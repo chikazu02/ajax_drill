@@ -7,9 +7,15 @@ $(function(){
       url: url,
       type: "POST",
       data: formData,
-      dataType: JSON,
+      dataType: `JSON`,
       processData: false,
       contentType: false
+    })
+    .done(function(post){
+      console.log(post);
+    })
+    .fail(function(){
+
     })
   });
 });
