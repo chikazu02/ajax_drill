@@ -23,7 +23,8 @@ $(function(){
     })
     .done(function(post){
       var html = buildPost(post);
-      debugger
+      $(`.contents`).append(html);
+      $(`#post_text`).val("");
     })
     .fail(function(){
 
