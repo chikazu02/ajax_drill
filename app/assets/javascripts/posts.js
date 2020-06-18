@@ -1,6 +1,8 @@
 $(function(){
   $('#new_post').on('submit', function(e){
     e.preventDefault();
-    console.log("ok");
+    var formData = new FormData(this);
+    var url = $(this).attr('action');
+    debugger;
   });
 });
