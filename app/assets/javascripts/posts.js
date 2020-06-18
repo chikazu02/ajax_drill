@@ -1,4 +1,14 @@
 $(function(){
+
+
+  function buildPost(post){
+    var html = `<div class="content">
+                  ${post.text}
+                </div>`
+    return html;
+  }
+
+
   $('#new_post').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -12,7 +22,8 @@ $(function(){
       contentType: false
     })
     .done(function(post){
-      console.log(post);
+      var html = buildPost(post);
+      debugger
     })
     .fail(function(){
 
